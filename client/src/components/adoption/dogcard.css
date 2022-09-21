@@ -1,0 +1,13 @@
+.dog-card-container{
+    max-width: 300px;
+    min-width: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 40px;
+}
+
+.dog-card-image{
+    object-fit: cover;
+    max-height: 350px;
+    height: 350px;
+}
