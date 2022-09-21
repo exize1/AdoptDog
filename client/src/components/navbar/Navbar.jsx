@@ -1,40 +1,33 @@
-import { Form } from 'formik';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import css from "./navbar.css";
+import "./navbar.css";
 import logo from "./logo1.png"
+import { Link } from 'react-router-dom';
 
 
 function MainNavbar() {
     return (
-      <>
-  
-
-  <nav className="navbar bg-light mainnav ">
-  <div className="container navitems">
-    <a className="navbar-brand" href="#">
-    <img className='logoimg' src={logo} /> 
-    </a>
-    <h1 className='navphonenumber'>*4955</h1>
-  <div className= 'navbuttons'>
-  <button className='navbtn1'> התנדבות</button> 
-  <button className='navbtn2'> אימוץ כלב</button>
-  <button className='navbtn3'> חדשות</button>
-  <button className='navbtn4'> צרו קשר</button>
-  <button className='navbtn5'> תרומה</button>
-  </div>
-   </div>
-</nav>
-       
-        {/* <Navbar className=>
-          <Container className='navitems'>
-  
-  >
-
-  </div>
-          </Container>
-        </Navbar> */}
-      </>
+      <nav className="navbar bg-light mainnav ">
+        <div className="container navitems">
+          <a className="navbar-brand" href="#">
+          <Link to={"/"}>
+            <img className='logoimg' src={logo} /> 
+          </Link>
+          </a>
+          <h1 className='navphonenumber'>*4955</h1>
+          <div className= 'navbuttons'>
+            <Link to={"/volunteering"}>
+              <button className='navbtn1'> התנדבות</button> 
+            </Link>
+            <Link to={"/adoption"}>
+              <button className='navbtn2'> אימוץ כלב</button>
+            </Link>
+            <button className='navbtn3'> חדשות</button>
+            <button className='navbtn4'> צרו קשר</button>
+            <Link to={"/donation"}>
+              <button className='navbtn5'> תרומה</button>
+            </Link>
+          </div>
+        </div>
+      </nav>
     );
   }
   
