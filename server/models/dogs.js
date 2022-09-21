@@ -25,6 +25,10 @@ const DogSchema = mongoose.Schema({
     size: {
         type : String,
         required : true
+    },
+    adopted: {
+        type : Boolean 9v,
+        required : true
     }
 })
 
