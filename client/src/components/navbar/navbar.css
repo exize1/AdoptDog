@@ -8,9 +8,9 @@
 }
  .logoimg{
     height: 13vh;
-  margin-top: -3vh;
-   width: fit-content;
-   margin-right: -20vw;
+    margin-top: -3vh;
+    width: fit-content;
+    margin-right: -20vw;
  }
  .navitems {
     display: flex !important;
