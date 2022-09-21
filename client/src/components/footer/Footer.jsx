@@ -5,25 +5,25 @@ import * as Yup from "yup";
 
 const Footer = () => {
     return(
-        <div className="footer-contianer">
+        <div className="footer-container">
             <div className="form-contact-container">
                 <Formik >
                     <form>
-                    <div className="">
-                        <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="שם הפונה *"/>
+                    <div className="form-floating">
+                        <input type="email" className="form-control" id="floatingInput" placeholder="שם הפונה *"/>
+                        <label for="floatingInput" className="form-label">שם הפונה *</label>
                     </div>
-                    <div className="">
-                        <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="כתובת אי-מייל *"/>
+                    <div className="form-floating">
+                        <input type="email" className="form-control" id="floatingInput" placeholder="כתובת אי-מייל *"/>
+                        <label for="floatingInput" className="form-label">כתובת אי-מייל *</label>
                     </div>
-                    <div className="">
-                        <label for="exampleFormControlInput1" className="form-label">Email address</label>
-                        <input type="email" className="form-control" id="exampleFormControlInput1" placeholder="טלפון*"/>
+                    <div className="form-floating">
+                        <input type="email" className="form-control" id="floatingInput" placeholder="טלפון*"/>
+                        <label for="floatingInput" className="form-label">טלפון*</label>
                     </div>
-                    <div className="">
-                        <label for="exampleFormControlTextarea1" className="form-label">Example textarea</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"  placeholder="תוכן הפנייה *"></textarea>
+                    <div className="form-floating">
+                        <textarea className="form-control" id="floatingInput" rows="3"  placeholder="תוכן הפנייה *"></textarea>
+                        <label for="floatingInput" className="form-label">תוכן הפנייה *</label>
                     </div>
                     <button type="submit" className="btn btn-primary">שליחה</button>
                     </form>
