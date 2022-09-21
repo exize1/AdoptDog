@@ -5,12 +5,12 @@ import Navbar from "../../components/navbar/Navbar"
 
 const Home = () => {
     return(
-        <>
+        <div className="home-container">
             <Navbar/>
             <Hero/>
             <About/>
             <Footer/>
-        </>
+        </div>
     )
 }
 
