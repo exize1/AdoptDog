@@ -1,8 +1,10 @@
 import './dogmodal.css'
 import { Formik } from "formik";
 import * as Yup from "yup";
+import { useDispatch, useSelector } from "react-redux";
+import { update } from '../../FormsSlice';
 
-const DogModal = (props) => {
+const DogModal = ({dog, index}) => {
     const schema = Yup.object().shape({
         fullName: Yup.string()
           .required("Pleasse enter your name"),
@@ -12,10 +14,23 @@ const DogModal = (props) => {
     
         phone: Yup.string()
           .required("Pleasse enter your password again")
-          .matches(/[0-9]/, "phone number can contain numbers only.")
-          .min(10, "Phone number should containe only "),
+          .min(10, "Phone number should containe 10 numbers exactly")
+          .max(10, "Phone number should containe 10 numbers exactly")
+          .matches(/[0-9]/, "phone number can contain numbers only."),
       });
 
+      
+      const handleSubmition = (values) => {
+          const value = {
+          fullName: values.fullName,
+          email: values.email,
+          phone: values.phone
+        };
+        dispatch(update(value));
+    };
+
+    const dispatch = useDispatch();
+    
     return(
         <div className="dog-modal-container">
             <button type="button" className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -29,9 +44,11 @@ const DogModal = (props) => {
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                            <img src={props.src} alt="" />
-                            <p>{props.description}</p>
-                            <h3>רוצים לאמץ את {props.dogName}</h3>
+                            <div className='modal-dog-img-container'>
+                                <img  className='modal-dog-img' src={dog.src} alt="" />
+                            </div>
+                            <p>{dog.description}</p>
+                            <h3>רוצים לאמץ את {dog.dogName}</h3>
                             <p>מלאו את פרטיכם או התקשרו *4955</p>
                             <p>*אימוץ מתבצע על ידי בן משפחה בן 18 פלוס</p>
                             <Formik
@@ -40,8 +57,7 @@ const DogModal = (props) => {
                                     email: "",
                                     phone: ""
                                 }}
-                              onSubmit={(values) => alert(JSON.stringify(values))}
-                            //   onSubmit={(values) => handleSubmition(values)}
+                              onSubmit={(values) => handleSubmition(values)}
                             validationSchema={schema}
                             >
                               {({
@@ -54,17 +70,17 @@ const DogModal = (props) => {
                               }) => (
                                 <form action="" onSubmit={handleSubmit} noValidate>
                                     <div className="form-floating mb-3">
-                                        <input required name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם ושם משפחה*" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
+                                        <input name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם ושם משפחה*" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
                                         <label for="floatingInput">שם ושם משפחה*</label>
                                         <p className="error-message">{errors.fullName && touched.fullName && errors.fullName}</p>
                                     </div>
                                     <div className="form-floating mb-3">
-                                        <input required name="email" type="text" className="form-control" id="floatingInput" placeholder=">אימייל*" onChange={handleChange} value={values.email} onBlur={handleBlur} />
+                                        <input name="email" type="email" className="form-control" id="floatingInput" placeholder=">אימייל*" onChange={handleChange} value={values.email} onBlur={handleBlur} />
                                         <label for="floatingInput">אימייל*</label>
                                         <p className="error-message">{errors.email && touched.email && errors.email}</p>
                                     </div>
                                     <div className="form-floating mb-3">
-                                        <input required name="phone" type="text" className="form-control" id="floatingInput" placeholder="טלפון*" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
+                                        <input name="phone" type="text" className="form-control" id="floatingInput" placeholder="טלפון*" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
                                         <label for="floatingInput">טלפון*</label>
                                         <p className="error-message">{errors.phone && touched.phone && errors.phone}</p>
                                     </div>

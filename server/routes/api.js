@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const Dog = require('../models/dogs')
+const Former = require('../models/formers')
 
 router.get('/dogs/', ( req, res, next ) => {
     Dog.find({})
@@ -11,6 +12,20 @@ router.get('/dogs/', ( req, res, next ) => {
 router.post('/dogs/', (req, res, next) =>{
     req.body.src && req.body.dogName  && req.body.shortDescription  && req.body.gender  && req.body.age && req.body.size ?
     Dog.create(req.body)
+        .then((data) => res.json(data))
+        .catch(next) :
+        res.json({error: 'this input is empty'})
+})
+
+router.get('/formers/', ( req, res, next ) => {
+    Former.find({})
+    .then((data) => res.json(data))
+    .catch(next)
+})
+
+router.post('/formers/', (req, res, next) =>{
+    req.body.fullName && req.body.email  && req.body.phone ?
+    Former.create(req.body)
         .then((data) => res.json(data))
         .catch(next) :
         res.json({error: 'this input is empty'})

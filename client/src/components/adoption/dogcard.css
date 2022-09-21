@@ -6,6 +6,11 @@
     margin-bottom: 40px;
 }
 
+.adopted-mark{
+    position: absolute;
+    left: 90%;
+}
+
 .dog-card-image{
     object-fit: cover;
     max-height: 350px;

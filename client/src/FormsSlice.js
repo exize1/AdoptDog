@@ -6,7 +6,6 @@ export const FormsSlice = createSlice({
         fullName: "",
         email: "",
         phone: ""
-        
     }, 
     reducers: {
         update: (state, values) => {
