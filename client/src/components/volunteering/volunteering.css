@@ -7,11 +7,26 @@
 .explaination{
     margin-left: 25%;
     margin-right: 25%;
-    padding: 5% 0;
+    padding: 1% 0;
+}
+
+.explaination-title{
+    font-size: 600%;
+    margin: 3% 0;
+}
+
+.explaination-sub-title{
+    font-size: 200%;
+    margin: 3% 0;
+}
+
+.volunteering-text{
+    font-size: 130%;
+    margin: 3% 0;
 }
 
 .hole{
-    height: 100vh;
+    height: 80vh;
 }
 
 .background-img-container{
@@ -23,4 +38,22 @@
     object-fit: cover;
     width: 100vw;
     
+}
+
+.volunteering-details-container{
+    display: flex;
+    justify-content: center;
+    text-align: start;
+}
+
+.volunteering-details{
+    width: 50%;
+}
+
+.volunteering-title{
+
+}
+
+.volunteering-descriptopn{
+    width: 80%;
 }
