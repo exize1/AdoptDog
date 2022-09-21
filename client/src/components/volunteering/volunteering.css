@@ -1,0 +1,26 @@
+
+.explaination-contianer{
+    background-color: white;
+    direction: rtl;
+}
+
+.explaination{
+    margin-left: 25%;
+    margin-right: 25%;
+    padding: 5% 0;
+}
+
+.hole{
+    height: 100vh;
+}
+
+.background-img-container{
+    position: fixed;
+    z-index: -1;
+}
+
+.background-img{
+    object-fit: cover;
+    width: 100vw;
+    
+}
