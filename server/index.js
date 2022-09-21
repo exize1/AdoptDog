@@ -3,7 +3,7 @@ const express = require('express')
 const bodyParser = require("body-parser")
 const routes = require('./routes/api')
 
-const port = 5000
+const port = 5001
 require('dotenv').config()
 
 const app = express()
