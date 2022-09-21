@@ -1,11 +1,64 @@
 .about-container{
-
+height: 100vh;
+background-color: white;
 }
 
-.about-title{
+.hearticon{
+    height: 6vh;
+    margin-top: -13vh;
+    margin-left: -30vw;
+}
+.abouttext{
+    margin-top: 5vh;
+    font-size: x-large;
+    line-height: 8vh;
+    margin-right: 10vw;
+    margin-left: 10vw;
+    font-weight: bold;
 
 }
-
-.about-description{
-    
+.abouttitle{color:#336cc2 ;
+    font-weight: bold;
+    font-size: 8vh;
+    margin-top: 15vh;
 }
+
+.Animation {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .runningLine {
+    width: 100vw;
+    height: 30vh;
+    position: relative;
+  }
+  .one {
+    position: absolute;
+    min-width: 100%;
+  }
+  .one span {
+    display: inline-block;
+    padding-left: 100%;
+    white-space: nowrap;
+    animation: animationOne 15s linear infinite;
+  }
+  /* add the duration */
+  .two span {
+    animation-delay: 7.5s;
+  }
+  /* delay = duration / 2  */
+  .imges {
+    margin: 3vw;
+    width: 15vw;
+    height: 20vh;
+  }
+  @keyframes animationOne {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
