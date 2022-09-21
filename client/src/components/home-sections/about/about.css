@@ -1,12 +1,18 @@
 .about-container{
-height: 100vh;
+height: 150vh;
 background-color: white;
 }
 
 .hearticon{
     height: 6vh;
-    margin-top: -13vh;
-    margin-left: -30vw;
+    margin-top: 3vh;
+
+}
+.handicon{
+    height: 6vh;
+}
+.dogicon{
+    height: 6vh;
 }
 .abouttext{
     margin-top: 5vh;
@@ -15,13 +21,19 @@ background-color: white;
     margin-right: 10vw;
     margin-left: 10vw;
     font-weight: bold;
+    color: #336cc2;
 
 }
 .abouttitle{color:#336cc2 ;
     font-weight: bold;
     font-size: 8vh;
-    margin-top: 15vh;
+    margin-top: 5vh;
+
+    
+    
 }
+
+
 
 .Animation {
     height: 40vh;
