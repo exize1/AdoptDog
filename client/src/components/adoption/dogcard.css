@@ -5,11 +5,8 @@
     margin-left: 20px;
     margin-bottom: 40px;
     background-color: transparent;
-    filter: drop-shadow(7px 4px 4px);
     border-radius: 10%;
-    
 }
-
 
 .adopted-mark{
     position: absolute;
@@ -23,37 +20,19 @@
    
 }
 
-.cardtext{ 
-}
-
 .card-text{ 
-    
     background-color: white;
     color: black;
     opacity: 1%;
     filter: brightness(2.5);
-   
-    
 }
-
-/* .card-text{
-   
-    position: relative;
-  width: 50%;
-  display: none;
-} */
 
 .dog-details-container{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
- overflow: hidden;
+    overflow: hidden;
 }
-
-
-
-
-
 
 .dog-details{
     color: rgb(255, 255, 255);
