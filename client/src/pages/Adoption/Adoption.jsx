@@ -3,8 +3,6 @@ import { useEffect, useState } from "react"
 import DogCard from "../../components/adoption/DogCard"
 import FilterSection from "../../components/adoption/FilterSection"
 import axios from 'axios'
-import DogModal from '../../components/adoption/ModalDog'
-import NewDogModal from '../../components/adoption/NewModalGod'
 
 
 const Adoption = () => {
@@ -27,7 +25,7 @@ const Adoption = () => {
     },[])
 
     return(
-        <div className="adoption-container">
+        <div className="adoption-container container">
             <FilterSection 
                 setSearchGender={setSearchGender} 
                 setSearchAge={setSearchAge}

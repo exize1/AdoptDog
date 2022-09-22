@@ -1,5 +1,4 @@
 import './dogcard.css'
-import DogModal from './ModalDog'
 import NewDogModal from './NewModalGod'
 
 const DogCard = ({ dog }) => {
@@ -8,25 +7,30 @@ const DogCard = ({ dog }) => {
     return(
         <div className="dog-card-container">
             <div className="card text-bg-dark">
-                <span className="adopted-mark">✅</span>
-                <img src={dog.src} className="dog-card-image card-img" alt="..."/>
-                <div className="card-img-overlay">
-                    <h5 className="dog-card-title card-title">{dog.dogName}</h5>
-                    <p className="dog-card-description card-text">{dog.shortDescription}</p>
+                {dog.adopted && <span className="adopted-mark">✅</span>}
+                <img src={dog.src} className="dog-card-image imgcard" alt="..."/>
+                <div className="card-img-overlay dog-details-container ">
+                    <div>
+                        <h5 className="dog-card-title card-title">{dog.dogName}</h5>
+                    </div>
+                    <div>
+                        <p className="dog-card-description card-text1">{dog.shortDescription}</p>
+                    </div>
                 </div>
+                    <div className="row dog-details">
+                        <div className="col">
+                            {dog.gender}
+                        </div>
+                        <div className="col">
+                            {dog.age}
+                        </div>
+                        <div className="col">
+                            {dog.size}
+                        </div>
+                    </div>
             </div>
-            <NewDogModal dog={dog}></NewDogModal>
-            <div className="row">
-                <div className="col">
-                    {dog.gender}
-                </div>
-                <div className="col">
-                    {dog.age}
-                </div>
-                <div className="col">
-                    {dog.size}
-                </div>
-            </div>
+                <NewDogModal dog={dog}></NewDogModal>
+  
         </div>
     )
 }

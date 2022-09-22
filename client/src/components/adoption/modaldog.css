@@ -49,6 +49,26 @@
     margin-right: 3% ;
 }
 
+.onmebtn{
+    background-color: #336dc3;
+    border:6px 6px;
+    margin:2vh;
+    width: 8vw;
+}
+
+.onmebtn:hover{
+    background-color: #75c333 !important;
+    border-color: transparent !important;
+}
+
+
 .error-message{
     color: red;
+}
+.adopted{background-color: #75c333;
+border: transparent;
+margin: 4vh;
+}
+.adopted:hover{
+    background-color: #75c333 !important;
 }
