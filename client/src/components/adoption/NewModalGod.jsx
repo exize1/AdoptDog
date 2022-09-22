@@ -25,7 +25,7 @@ const NewDogModal = ({dog}) => {
 
     const form = useRef();
     const sendEmail = () => {
-        emailjs.sendForm('service_fexworp', 'template_i6lbmm8', form.current, 'a-l6-BOufBazyXFlh')
+        emailjs.sendForm('service_fexworp', 'template_qyvn527', form.current, 'a-l6-BOufBazyXFlh')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
