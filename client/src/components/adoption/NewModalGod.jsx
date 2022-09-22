@@ -1,9 +1,8 @@
 import './modaldog.css'
 import { Formik } from "formik";
 import * as Yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
-import { update } from '../../FormsSlice';
-import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { useState, useRef } from 'react';
 
 
 const NewDogModal = ({dog}) => {
@@ -23,6 +22,16 @@ const NewDogModal = ({dog}) => {
 
     const [open, setOpen] = useState(false)
     const [alert, setAlert] = useState(false)
+
+    const form = useRef();
+    const sendEmail = () => {
+        emailjs.sendForm('service_fexworp', 'template_qyvn527', form.current, 'a-l6-BOufBazyXFlh')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    };
 
     const handleSubmition = () => {
       setAlert(true)
@@ -63,9 +72,12 @@ const NewDogModal = ({dog}) => {
                                 initialValues={{
                                     fullName: "",
                                     email: "",
-                                    phone: ""
+                                    phone: "",
                                 }}
-                                onSubmit={() => handleSubmition()}
+                                onSubmit={() => {
+                                    handleSubmition()
+                                    sendEmail()
+                                }}
                                 validationSchema={schema}
                             >
                                 {({
@@ -76,8 +88,10 @@ const NewDogModal = ({dog}) => {
                                 errors,
                                 touched,
                                 }) => (
-                                <form action="" onSubmit={handleSubmit} noValidate>
-                                    <div className="form-floating mb-3 right-to-left">
+
+                                <form ref={form} onSubmit={handleSubmit} noValidate>
+                                    <div className="form-floating mb-3">
+
                                         <input name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם ושם משפחה*" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
                                         <label for="floatingInput">שם ושם משפחה*</label>
                                         <p className="error-message">{errors.fullName && touched.fullName && errors.fullName}</p>
