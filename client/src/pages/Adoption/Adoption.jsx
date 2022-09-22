@@ -21,7 +21,7 @@ const Adoption = () => {
 
     const [dogs, setDogs] = useState([])
 
-    const filter = () => {
+    const filtered = () => {
         return(
             dogs.filter((val) => {
                 if(searchGender == ""){
@@ -60,11 +60,11 @@ const Adoption = () => {
                 setSearchSize={setSearchSize}
             />
             <div className="cards-container">
-                {filter().length === 0 ? 
+                {filtered().length === 0 ? 
                     (<div>
                         <p>לא מוצא/ת את הכלב שאת/ה מחפש/ת?</p>
                         <NoResoultModal name="לחצ/י כאן" size={searchSize} age={searchAge} gender={searchGender} />
-                    </div>) : filter().map(dog => <DogCard dog={dog}/>)}
+                    </div>) : filtered().map(dog => <DogCard dog={dog}/>)}
             </div>
         </div>
     )
