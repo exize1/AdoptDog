@@ -17,6 +17,21 @@ router.post('/dogs/', (req, res, next) =>{
         res.json({error: 'this input is empty'})
 })
 
+router.delete('/dogs/:id', ( req, res, next ) => {
+    Dog.findOneAndDelete({_id: req.params.id})
+    .then((data) => res.json(data))
+    .catch(next)
+})
+
+router.patch('/dogs/:id', ( req, res, next ) => {
+    Dog.findOneAndUpdate({_id: req.params.id})
+    .then((data) => res.json(data))
+    .catch(next)
+})
+
+
+
+
 router.get('/formers/', ( req, res, next ) => {
     Former.find({})
     .then((data) => res.json(data))

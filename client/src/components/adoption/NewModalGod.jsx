@@ -103,7 +103,7 @@ const NewDogModal = ({dog}) => {
                                         <textarea type="email" className="form-control" id="floatingInput" placeholder="הודעה אישית*"/>
                                         <label for="floatingInput">הודעה אישית*</label>
                                     </div>
-                                    <button type="submit"></button>
+                                    <button type="submit" className="btn btn-primary">Save changes</button>
                                 </form>
                                 )}
                             </Formik>
@@ -111,7 +111,6 @@ const NewDogModal = ({dog}) => {
                     </div>
                     <div className='modal-footer-contianer modal-footer'>
                         <button onClick={() => handleClose()} type="button" className="btn btn-secondary close-btn">Close</button>
-                        <button type="submit" className="btn btn-primary">Save changes</button>
                     </div>
                 </div>
             </div>
