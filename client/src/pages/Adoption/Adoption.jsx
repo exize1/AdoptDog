@@ -4,6 +4,8 @@ import DogCard from "../../components/adoption/DogCard"
 import FilterSection from "../../components/adoption/FilterSection"
 import axios from 'axios'
 import dog from '../../components/home-sections/about/doglogo.png'
+import NoResoultModal from '../../components/adoption/NoResoultModal'
+
 
 
 const Adoption = () => {
@@ -20,6 +22,30 @@ const Adoption = () => {
     }
 
     const [dogs, setDogs] = useState([])
+
+    const filter = () => {
+        return(
+            dogs.filter((val) => {
+                if(searchGender == ""){
+                    return val;
+                }else if(val.gender.includes(searchGender)){
+                    return val;
+                }
+            }).filter((val) => {
+                if(searchAge == ""){
+                    return val;
+                }else if(val.age.includes(searchAge)){
+                    return val;
+                }
+            }).filter((val) => {
+                if(searchSize == ""){
+                    return val;
+                }else if(val.size.includes(searchSize)){
+                    return val;
+                }
+            })
+        )
+    }
     
     useEffect(()=>{
         getDogs()
@@ -37,25 +63,11 @@ const Adoption = () => {
                 setSearchSize={setSearchSize}
             />
             <div className="cards-container">
-                {dogs.filter((val) => {
-                    if(searchGender == ""){
-                        return val;
-                    }else if(val.gender.includes(searchGender)){
-                        return val;
-                    }
-                }).filter((val) => {
-                    if(searchAge == ""){
-                        return val;
-                    }else if(val.age.includes(searchAge)){
-                        return val;
-                    }
-                }).filter((val) => {
-                    if(searchSize == ""){
-                        return val;
-                    }else if(val.size.includes(searchSize)){
-                        return val;
-                    }
-                }).map( (dog) => <DogCard dog={dog}/>)}
+                {filter().length === 0 ? 
+                    (<div>
+                        <p>לא מוצא/ת את הכלב שאת/ה מחפש/ת?</p>
+                        <NoResoultModal size={searchSize} age={searchAge} gender={searchGender} />
+                    </div>) : filter().map(dog => <DogCard dog={dog}/>)}
 
             </div>
             

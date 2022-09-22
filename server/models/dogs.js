@@ -14,6 +14,10 @@ const DogSchema = mongoose.Schema({
         type : String,
         required : true
     },
+    description: {
+        type : String,
+        required : true
+    },
     gender: {
         type : String,
         required : true
@@ -27,7 +31,7 @@ const DogSchema = mongoose.Schema({
         required : true
     },
     adopted: {
-        type : Boolean 9v,
+        type : Boolean,
         required : true
     }
 })

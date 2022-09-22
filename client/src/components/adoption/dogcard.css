@@ -5,16 +5,13 @@
     margin-left: 20px;
     margin-bottom: 40px;
     background-color: transparent;
-
     border-radius: 10%;
-    
 }
 .dog-details-container{
     color: rgb(255, 255, 255);
     opacity: 100;
     position: absolute;
 }
-
 
 .adopted-mark{
     position: absolute;
@@ -25,51 +22,36 @@
     object-fit: cover;
     max-height: 350px;
     height: 350px;
-   
 }
-/* .dog-card-image:hover{
-    opacity: 0.5;
-} */
+
 .dog-card:hover .dog-card-image {
     opacity: 0.5;
-}
-.cardtext{ 
 }
 
 .dog-card{
     font-size: 0;
 }
+
 .dog-card:hover{
     font-size: 2vh;
-    /* background-color: white; */
-    /* opacity: 30%; */
     transition: 0.30s;
-    
-    
 }
-
-/* .card-text{
-   
-    position: relative;
-  width: 50%;
-  display: none;
-} */
 
 .dog-details-container{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
- overflow: hidden;
- 
+    overflow: hidden;
 }
-.dog-card-title.card-title{
 
+.dog-card-title.card-title{
     font-size: 7vh;
     margin-top: -13vh;
     font-weight: bolder;
     color: #f06294;
     font-family: emoji;
 }
+
 
 
 
