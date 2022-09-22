@@ -72,3 +72,21 @@ margin: 4vh;
 .adopted:hover{
     background-color: #75c333 !important;
 }
+
+
+.dog-details-container{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #6fa1ea;
+    font-size: large;
+    border-radius: 30px;
+    height: 60px;
+    margin-bottom: 3%;
+}
+
+.modal-dropdown{
+    height: 80%;
+    align-self: center;
+    border-radius: 10px;
+
+}
