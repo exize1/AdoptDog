@@ -3,3 +3,10 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.save-your-spot-btn{
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    bottom: 30px;
+}

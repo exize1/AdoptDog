@@ -47,8 +47,7 @@ const NewDogModal = ({dog}) => {
             {dog.adopted === true ? 
                 <button type="button" className="btn btn-primary adopted">אומצתי</button>  
             :
-                <button onClick={() => handleOpen()} type="button" className="btn btn-primary onmebtn">  אמצו אותי עכשיו </button>
-                
+                <button onClick={() => handleOpen()} type="button" className="btn btn-primary onmebtn"> אמצו אותי  </button>
             } 
         { open &&
             <div className='modal-background'>

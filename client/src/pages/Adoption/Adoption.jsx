@@ -51,6 +51,9 @@ const Adoption = () => {
 
     return(
         <div className="adoption-container container">
+            <div className='save-your-spot-btn'>
+                <NoResoultModal name="מיצאו את הכלב עבורכם"/>  
+            </div>
             <FilterSection 
                 setSearchGender={setSearchGender} 
                 setSearchAge={setSearchAge}
@@ -60,11 +63,9 @@ const Adoption = () => {
                 {filter().length === 0 ? 
                     (<div>
                         <p>לא מוצא/ת את הכלב שאת/ה מחפש/ת?</p>
-                        <NoResoultModal size={searchSize} age={searchAge} gender={searchGender} />
+                        <NoResoultModal name="לחצ/י כאן" size={searchSize} age={searchAge} gender={searchGender} />
                     </div>) : filter().map(dog => <DogCard dog={dog}/>)}
-
             </div>
-            
         </div>
     )
 }

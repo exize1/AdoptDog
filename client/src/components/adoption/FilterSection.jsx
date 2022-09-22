@@ -1,4 +1,5 @@
 import './filtersection.css'
+import NoResoultModal from './NoResoultModal'
 
 
 const FilterSection = ({setSearchGender, setSearchAge, setSearchSize}) => {
@@ -45,6 +46,7 @@ const FilterSection = ({setSearchGender, setSearchAge, setSearchSize}) => {
                         </ul>
                     </div>
                 </div>
+                    <p> </p>
             </div>
         </div>
     )

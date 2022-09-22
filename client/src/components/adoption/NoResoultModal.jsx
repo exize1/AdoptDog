@@ -2,7 +2,7 @@ import { Formik } from "formik"
 import { useState } from "react";
 import * as Yup from "yup";
 
-const NoResoultModal = ({age, size, gender}) => {
+const NoResoultModal = ({age, size, gender, name}) => {
     const schema = Yup.object().shape({
         fullName: Yup.string()
           .required("Pleasse enter your name"),
@@ -37,7 +37,7 @@ const NoResoultModal = ({age, size, gender}) => {
       return(
           <div className='modal-container'>
               <button onClick={() => handleOpen()} type="button" className="btn btn-primary">
-              לחצ/י עליי
+              {name}
               </button>
           { open &&
               <div className='modal-background'>
@@ -48,7 +48,7 @@ const NoResoultModal = ({age, size, gender}) => {
                       </div>
                       <div className='add-overflow'>
                           <div className='modal-body-contianer'>
-                            <div className="dog-details-container">
+                            <div className="modal-details-container">
                                 <button className="btn btn-secondary dropdown-toggle modal-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {gender ? gender: "הכל" }
                                 </button>
