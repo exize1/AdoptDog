@@ -1,5 +1,7 @@
 import { useState } from "react"
 import "./volunteering.css"
+import hand from './handlogo.png'
+import backgroundvideo from '../home-sections/hero/dogvideobg2.mp4'
 
 const Volunteering = () => {
 
@@ -49,10 +51,13 @@ const Volunteering = () => {
     return(
         <div>
             <div className="background-img-container">
-                <img className="background-img" src="https://www.ispca.ie/-/rehoming/jasmine2.jpg" alt="" />
+            <video autoPlay loop muted id="backgroundvideo">
+                <source src={backgroundvideo}  type="video/mp4"/>
+            </video>
             </div>
             <div className="explaination-contianer">
                 <div className="explaination">
+                    <img className="mainhand" src={hand}  />
                     <h1 className="explaination-title">להתנדב</h1>
                     <h4 className="explaination-sub-title">עיזרו לנו לעזור להם</h4>
                     <p className="volunteering-text">תיואור על התתנדבות ועיוגכ דגלכ גכלח דג כגכע דגכח כמהלחחדגהג דהדלה כג מהדגלכמה גכד הלגשכ הלדכמה דצלךגככהלגצכמהל שגצהגךכתצה גכדגמ דכלה שדגך כחצהלחגכצמה לגכךכחה גככצמעה ללחזכצלךכגמהלגצ הלגדכמה םגחכהךלזגה  </p>
@@ -65,22 +70,23 @@ const Volunteering = () => {
             <div className="hole"/>
             <div className="explaination-contianer">
                 <h1>מצאו את ההתנדבות המתאימה לכם</h1>
-                <ul>
+                 <ul>
                 {volunteerList.map(item => {
                     return(
                         <>
-                        <li>
+                        <ul>
                             <div className="volunteering-details-container">
                                 <div className="volunteering-details">
+                                <img className="handlogo"src={hand}  />
                                     <h3 className="volunteering-title">{item.title}</h3>
                                     <p className="volunteering-descriptopn">{item.descriptopn}</p>
                                 </div>
-                                <div>
+                                <div className="hours">
                                     <p>ימי פעילות:</p>
                                     <p>{item.activityHours.map(item => <p>{item}</p>)}</p>
                                 </div>
                             </div>
-                        </li>
+                        </ul>
                         <hr />
                         </>
                     )

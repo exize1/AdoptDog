@@ -5,9 +5,14 @@
     margin-left: 20px;
     margin-bottom: 40px;
     background-color: transparent;
-    filter: drop-shadow(7px 4px 4px);
+
     border-radius: 10%;
     
+}
+.dog-details-container{
+    color: rgb(255, 255, 255);
+    opacity: 100;
+    position: absolute;
 }
 
 
@@ -22,17 +27,24 @@
     height: 350px;
    
 }
-
+/* .dog-card-image:hover{
+    opacity: 0.5;
+} */
+.dog-card:hover .dog-card-image {
+    opacity: 0.5;
+}
 .cardtext{ 
 }
 
-.card-text{ 
+.dog-card{
+    font-size: 0;
+}
+.dog-card:hover{
+    font-size: 2vh;
+    /* background-color: white; */
+    /* opacity: 30%; */
+    transition: 0.30s;
     
-    background-color: white;
-    color: black;
-    opacity: 1%;
-    filter: brightness(2.5);
-   
     
 }
 
@@ -48,6 +60,15 @@
     flex-direction: column;
     justify-content: space-evenly;
  overflow: hidden;
+ 
+}
+.dog-card-title.card-title{
+
+    font-size: 7vh;
+    margin-top: -13vh;
+    font-weight: bolder;
+    color: #f06294;
+    font-family: emoji;
 }
 
 
@@ -55,10 +76,3 @@
 
 
 
-.dog-details{
-    color: rgb(255, 255, 255);
-    font-size: 125%;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-    font-weight: 900;
-}

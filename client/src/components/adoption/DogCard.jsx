@@ -6,7 +6,7 @@ const DogCard = ({ dog }) => {
 
     return(
         <div className="dog-card-container">
-            <div className="card text-bg-dark">
+            <div className="card text-bg-dark dog-card">
                 {dog.adopted && <span className="adopted-mark">✅</span>}
                 <img src={dog.src} className="dog-card-image imgcard" alt="..."/>
                 <div className="card-img-overlay dog-details-container ">
