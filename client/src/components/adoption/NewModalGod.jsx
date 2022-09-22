@@ -12,28 +12,21 @@ const NewDogModal = ({dog}) => {
           .required("Pleasse enter your name"),
     
         email: Yup.string().email()
-          .required("Pleasse enter password"),
+          .required("Pleasse enter a valid mail"),
     
         phone: Yup.string()
-          .required("Pleasse enter your password again")
+          .required("Pleasse enter your phone number")
           .min(10, "Phone number should containe 10 numbers exactly")
           .max(10, "Phone number should containe 10 numbers exactly")
           .matches(/[0-9]/, "phone number can contain numbers only."),
       });
 
-      
-      const handleSubmition = (values) => {
-          const value = {
-          fullName: values.fullName,
-          email: values.email,
-          phone: values.phone
-        };
-        dispatch(update(value));
-    };
-
-    const dispatch = useDispatch();
-
     const [open, setOpen] = useState(false)
+    const [alert, setAlert] = useState(false)
+
+    const handleSubmition = () => {
+      setAlert(true)
+  }
 
     const handleOpen = () => {
         setOpen(true)
@@ -48,8 +41,7 @@ const NewDogModal = ({dog}) => {
             {dog.adopted === true ? 
                 <button type="button" className="btn btn-primary adopted">אומצתי</button>  
             :
-                <button onClick={() => handleOpen()} type="button" className="btn btn-primary onmebtn">  אמצו אותי עכשיו </button>
-                
+                <button onClick={() => handleOpen()} type="button" className="btn btn-primary onmebtn"> אמצו אותי  </button>
             } 
         { open &&
             <div className='modal-background'>
@@ -73,8 +65,8 @@ const NewDogModal = ({dog}) => {
                                     email: "",
                                     phone: ""
                                 }}
-                                onSubmit={(values) => handleSubmition(values)}
-                            validationSchema={schema}
+                                onSubmit={() => handleSubmition()}
+                                validationSchema={schema}
                             >
                                 {({
                                 handleSubmit,
@@ -105,9 +97,13 @@ const NewDogModal = ({dog}) => {
                                         <label for="floatingInput">הודעה אישית*</label>
                                     </div>
                                     <button type="submit" className="btn btn-primary">Save changes</button>
+                                    <div class="alert alert-success" role="alert" hidden={!alert}>
+                                        A simple success alert—check it out!
+                                    </div>
                                 </form>
                                 )}
                             </Formik>
+                                  
                         </div>
                     </div>
                     <div className='modal-footer-contianer modal-footer'>

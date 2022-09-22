@@ -3,11 +3,20 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
+.save-your-spot-btn{
+    position: fixed;
+    z-index: 2;
+    right: 30px;
+    bottom: 30px;
+}
+
 .doghand{
     margin-top: 10vh;
     align-items: center;
     height: 15vh;
 }
+
 .adoptiontitle{
     font-size: 8vh;
     font-weight: bold;
@@ -15,6 +24,8 @@
     font-family: emoji;
     margin-bottom: -2vh;
 }
+
 .adoptedtop{
 height: 40vh;
 }
+

@@ -13,6 +13,10 @@
     position: absolute;
 }
 
+.dog-card{
+    filter: drop-shadow(2px 4px 6px black);
+}
+
 .adopted-mark{
     position: absolute;
     left: 90%;
@@ -22,6 +26,7 @@
     object-fit: cover;
     max-height: 350px;
     height: 350px;
+    border-radius: 1.5%;
 }
 
 .dog-card:hover .dog-card-image {
