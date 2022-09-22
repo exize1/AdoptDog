@@ -6,9 +6,8 @@ const FilterSection = ({setSearchGender, setSearchAge, setSearchSize}) => {
         <div className='filter-section-container container'>
             <div className="row">
                 <div className="col">
-                    <p className='dropdown-title'>מין</p>
                 <div className="dropdown">
-                    <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button className="btn btn-secondary dropdown-toggle filterbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         מין
                     </button>
                     <ul className="dropdown-menu">
@@ -20,9 +19,8 @@ const FilterSection = ({setSearchGender, setSearchAge, setSearchSize}) => {
                 </div>
                 </div>
                 <div className="col">
-                    <p className='dropdown-title'>גיל</p>
                     <div className="dropdown">
-                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn btn-secondary dropdown-toggle filterbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             גיל 
                         </button>
                         <ul className="dropdown-menu">
@@ -34,9 +32,8 @@ const FilterSection = ({setSearchGender, setSearchAge, setSearchSize}) => {
                     </div>
                 </div>
                 <div className="col">
-                    <p className='dropdown-title'>גודל</p>
                     <div className="dropdown">
-                        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button className="btn btn-secondary dropdown-toggle filterbtn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             גודל
                         </button>
                         <ul className="dropdown-menu">

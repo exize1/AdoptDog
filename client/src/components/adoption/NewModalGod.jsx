@@ -44,9 +44,12 @@ const NewDogModal = ({dog}) => {
 
     return(
         <div className='modal-container'>
-            <button onClick={() => handleOpen()} type="button" className="btn btn-primary">
-            😇 קצת עליי
-            </button>
+            {dog.adopted === true ? 
+                <button type="button" className="btn btn-primary adopted">אומצתי</button>  
+            :
+                <button onClick={() => handleOpen()} type="button" className="btn btn-primary onmebtn">  אמצו אותי עכשיו </button>
+                
+            } 
         { open &&
             <div className='modal-background'>
                 <div className='modal-fade-container'>
