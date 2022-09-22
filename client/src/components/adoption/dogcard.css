@@ -7,6 +7,11 @@
     background-color: transparent;
     border-radius: 10%;
 }
+.dog-details-container{
+    color: rgb(255, 255, 255);
+    opacity: 100;
+    position: absolute;
+}
 
 .dog-card{
     filter: drop-shadow(2px 4px 6px black);
@@ -24,11 +29,17 @@
     border-radius: 1.5%;
 }
 
-.card-text{ 
-    background-color: white;
-    color: black;
-    opacity: 1%;
-    filter: brightness(2.5);
+.dog-card:hover .dog-card-image {
+    opacity: 0.5;
+}
+
+.dog-card{
+    font-size: 0;
+}
+
+.dog-card:hover{
+    font-size: 2vh;
+    transition: 0.30s;
 }
 
 .dog-details-container{
@@ -38,10 +49,17 @@
     overflow: hidden;
 }
 
-.dog-details{
-    color: rgb(255, 255, 255);
-    font-size: 125%;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: rgb(0, 0, 0);
-    font-weight: 900;
+.dog-card-title.card-title{
+    font-size: 7vh;
+    margin-top: -13vh;
+    font-weight: bolder;
+    color: #f06294;
+    font-family: emoji;
 }
+
+
+
+
+
+
+
