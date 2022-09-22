@@ -86,22 +86,22 @@ const Footer = () => {
                             <form className='formdiv' action="" onSubmit={handleSubmit} noValidate>
                                 <div className="form-floating-forminputs">
                                     <input name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם הפונה *" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
-                                    <label for="floatingInput" className="form-label">שם הפונה *</label>
+                                    <label for="floatingInput" className="form-label"></label>
                                     <p className="error-message">{errors.fullName && touched.fullName && errors.fullName}</p>
                                 </div>
                                 <div className="form-floating-forminputs">
                                     <input name="email" type="email" className="form-control" id="floatingInput" placeholder="כתובת אי-מייל *" onChange={handleChange} value={values.email} onBlur={handleBlur}/>
-                                    <label for="floatingInput" className="form-label">כתובת אי-מייל *</label>
+                                    <label for="floatingInput" className="form-label" >  </label>
                                     <p className="error-message">{errors.email && touched.email && errors.email}</p>
                                 </div>
                                 <div className="form-floating-forminputs">
                                     <input name="phone" type="text" className="form-control" id="floatingInput" placeholder="טלפון*" onChange={handleChange} value={values.phone} onBlur={handleBlur}/>
-                                    <label for="floatingInput" className="form-label">טלפון*</label>
+                                    <label for="floatingInput" className="form-label">  </label>
                                     <p className="error-message">{errors.phone && touched.phone && errors.phone}</p>
                                 </div>
                                 <div className="form-floating-forminputs">
                                     <textarea className="form-control" id="floatingInput" rows="3"  placeholder="תוכן הפנייה *"></textarea>
-                                    <label for="floatingInput" className="form-label">תוכן הפנייה *</label>
+                                    <label for="floatingInput" className="form-label"></label>
                                 </div>
                                 <button type="submit" className="btn btn-primary">שליחה</button>
                             </form>

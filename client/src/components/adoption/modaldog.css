@@ -1,6 +1,10 @@
+.right-to-left{
+    direction: rtl;
+}
+
 .modal-background{
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     background-color: rgba(0, 0, 0, 0.2);
     height: 100vh;
     width: 100%;
@@ -65,14 +69,15 @@
 .error-message{
     color: red;
 }
+
 .adopted{background-color: #75c333;
 border: transparent;
 margin: 4vh;
 }
+
 .adopted:hover{
     background-color: #75c333 !important;
 }
-
 
 .modal-details-container{
     display: flex;
@@ -81,12 +86,22 @@ margin: 4vh;
     font-size: large;
     border-radius: 30px;
     height: 60px;
-    margin-bottom: 3%;
+    margin-top: 20%;
+    margin-bottom: 10%;
 }
 
 .modal-dropdown{
     height: 80%;
     align-self: center;
     border-radius: 10px;
+    
+}
 
+.no-resoult-btn{
+    margin-bottom: 40%;
+}
+
+.no-resoult-modal{
+    height: 80%;
+    margin-top: 8%;
 }

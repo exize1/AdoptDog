@@ -27,19 +27,15 @@ background-color: white;
 .abouttitle{color:#336cc2 ;
     font-weight: bold;
     font-size: 8vh;
-    margin-top: 5vh;
-
-    
-    
+    margin-top: 5vh;    
 }
-
-
 
 .Animation {
     height: 40vh;
     display: flex;
     align-items: center;
     overflow: hidden;
+    margin-top: -10vh;
   }
   .runningLine {
     width: 100vw;

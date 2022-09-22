@@ -13,6 +13,7 @@
 .explaination-title{
     font-size: 600%;
     margin: 3% 0;
+    color: #336ec3;
 }
 
 .explaination-sub-title{
@@ -23,6 +24,12 @@
 .volunteering-text{
     font-size: 130%;
     margin: 3% 0;
+    
+}
+
+.vulonteertitle{
+    color: #336ec3;
+    font-size: 7vh;
 }
 
 .hole{
