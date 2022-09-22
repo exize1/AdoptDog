@@ -3,7 +3,9 @@ import { useEffect, useState } from "react"
 import DogCard from "../../components/adoption/DogCard"
 import FilterSection from "../../components/adoption/FilterSection"
 import axios from 'axios'
+import dog from '../../components/home-sections/about/doglogo.png'
 import NoResoultModal from '../../components/adoption/NoResoultModal'
+
 
 
 const Adoption = () => {
@@ -50,7 +52,11 @@ const Adoption = () => {
     },[])
 
     return(
+      
         <div className="adoption-container container">
+             <div className='adoptedtop'> <img className='doghand' src={dog} />
+              <h1 className='adoptiontitle'>אמצו כלב עוד היום</h1>
+              </div>
             <FilterSection 
                 setSearchGender={setSearchGender} 
                 setSearchAge={setSearchAge}
