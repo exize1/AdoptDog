@@ -1,4 +1,5 @@
 import { Formik } from "formik"
+import "./modaldog.css"
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import * as Yup from "yup";
@@ -123,20 +124,20 @@ const NoResoultModal = ({age, size, gender, name}) => {
       const handleClose = () => {setOpen(false)}
   
       return(
-          <div className='modal-container'>
+          <div className='modal-container '>
               <button onClick={() => handleOpen()} type="button" className="btn btn-primary">
               {name}
               </button>
           { open &&
-              <div className='modal-background'>
-                  <div className='modal-fade-container'>
+              <div className='modal-background '>
+                  <div className='modal-fade-container no-resoult-modal'>
                       <div className='modal-title-contianer modal-header'>
-                          <h5 className="modal-title" id="exampleModalLabel">New Modal title</h5>
-                          <button onClick={() => handleClose()} type="button" className="btn-close"></button>
+                          <h5 className="modal-title left-to-right" id="exampleModalLabel">הזינו את פרטיכם</h5>
+                          <button onClick={() => handleClose()} type="button" className="btn-close"/>
                       </div>
                       <div className='add-overflow'>
                           <div className='modal-body-contianer'>
-                            <div className="modal-details-container">
+                            <div className="modal-details-container ">
                                 <button className="btn btn-secondary dropdown-toggle modal-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {gender ? gender: "הכל" }
                                 </button>
@@ -187,31 +188,31 @@ const NoResoultModal = ({age, size, gender, name}) => {
                                   touched,
                                   }) => (
                                   <form ref={form} onSubmit={handleSubmit} noValidate>
-                                      <div className="form-floating mb-3">
+                                      <div className="form-floating mb-3 right-to-left">
                                           <input name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם ושם משפחה*" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
                                           <label for="floatingInput">שם ושם משפחה*</label>
                                           <p className="error-message">{errors.fullName && touched.fullName && errors.fullName}</p>
                                       </div>
-                                      <div className="form-floating mb-3">
+                                      <div className="form-floating mb-3 right-to-left">
                                           <input name="email" type="email" className="form-control" id="floatingInput" placeholder=">אימייל*" onChange={handleChange} value={values.email} onBlur={handleBlur} />
                                           <label for="floatingInput">אימייל*</label>
                                           <p className="error-message">{errors.email && touched.email && errors.email}</p>
                                       </div>
-                                      <div className="form-floating mb-3">
+                                      <div className="form-floating mb-3 right-to-left">
                                           <input name="phone" type="text" className="form-control" id="floatingInput" placeholder="טלפון*" onChange={handleChange} value={values.phone} onBlur={handleBlur} />
                                           <label for="floatingInput">טלפון*</label>
                                           <p className="error-message">{errors.phone && touched.phone && errors.phone}</p>
                                       </div>
-                                      <div className="form-floating mb-3">
+                                      <div className="form-floating mb-3 right-to-left">
                                           <textarea type="text" className="form-control" id="floatingInput" placeholder="הודעה אישית*"/>
                                           <label for="floatingInput">הודעה אישית*</label>
                                       </div>
-                                      <button type="submit" className="btn btn-primary">Save changes</button>
+                                      <button type="submit" className="btn btn-primary no-resoult-btn right-to-left">שליחה</button>
                                   </form>
                                   )}
                               </Formik>
                                 {dogsOpenForAdoption === "0" ? 
-                                    <div class="alert alert-success"  role="alert" hidden={!alert}>
+                                    <div class="alert alert-success right-to-left"  role="alert" hidden={!alert}>
                                         {"הנתונים נקלטו במאגר שלנו, נחזור אליך ברגע שנמצא התאמה"}  
                                     </div> :
                                     <div class="alert alert-danger"  role="alert" hidden={!alert}>
@@ -221,7 +222,7 @@ const NoResoultModal = ({age, size, gender, name}) => {
                           </div>
                       </div>
                       <div className='modal-footer-contianer modal-footer'>
-                          <button onClick={() => handleClose()} type="button" className="btn btn-secondary close-btn">Close</button>
+                          <button onClick={() => handleClose()} type="button" className="btn btn-secondary close-btn right-to-left">סגור</button>
                       </div>
                   </div>
               </div>

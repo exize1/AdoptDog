@@ -69,7 +69,7 @@ const Volunteering = () => {
             </div>
             <div className="hole"/>
             <div className="explaination-contianer">
-                <h1>מצאו את ההתנדבות המתאימה לכם</h1>
+                <h1 className="vulonteertitle">מצאו את ההתנדבות המתאימה לכם</h1>
                  <ul>
                 {volunteerList.map(item => {
                     return(
