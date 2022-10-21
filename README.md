@@ -52,6 +52,8 @@ Modal - If a user got interested, he can click the button below the card, and a 
 It's important to mention that if a dog already adopted, he will apear in the page but the user will not be able to open the modal and leave his contact details. 
 That's because we want to motivate more people to adopt by letting them know that others adopting the dogs as well. 
 
+In addition, if a user can't find the dog he was looking for, he can send us his contact details, with his prefered dog parameters (Size, Age, Gender), And the system will save that. He will get a mail saying that his request got into our system and we will contact him soon.
+
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666362116/Screenshots/Adoption%20site/adoption_by5iz2.jpg"/></p>
 
 ### Volunteering page
