@@ -36,7 +36,7 @@ Hackathon project, 30 hours of coding, to create an adoption system for the muni
 ## Screenshots
 
 ### Home page
-Welcome page with video of different dogs that my project's partner has made.
+Welcome page with video of different dogs that my project's partner made by himself.
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666362429/Screenshots/Adoption%20site/homedog_jxr95g.jpg"/></p>
 
@@ -57,6 +57,8 @@ In addition, if a user can't find the dog he was looking for, he can send us his
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666362116/Screenshots/Adoption%20site/adoption_by5iz2.jpg"/></p>
 
 ### Volunteering page
+
+On this page we were focused on structure it simple. So the "Admin" will be able to add the necessery details about volunteerings (title, description, and working hours) and it will display orderly in the website.  
 
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666362171/Screenshots/Adoption%20site/voulenteer_jkogyi.jpg"/></p>
 
@@ -85,9 +87,8 @@ In addition, if a user can't find the dog he was looking for, he can send us his
   * mongoose
 
 ## What's next:
-- [ ] Add Phone number as an alternative option to login.
-- [ ] Add 'change password' and 'Delist all my auctions' options in the setting section. 
-- [ ] Replace the Credit Card option with Paypal or/and Tranzila instead of saving the user's card details in the DB. 
-- [ ] Improve the list of 'Most popular' (on the home page) so it will show the most popular at different times (24 hours, 7 days, 30 days).
-- [ ] Link the search output to the product page.
-- [ ] Show in the auction page, only the Active products
+- [ ] Add the News and Contact sections/pages. 
+- [ ] Add Responsiveness. 
+- [ ] Save the user's contact details in the DB
+- [ ] Admin dashboard
+
