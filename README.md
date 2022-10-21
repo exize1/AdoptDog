@@ -56,37 +56,8 @@ That's because we want to motivate more people to adopt by letting them know tha
 
 ### Volunteering page
 
-
 <p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666362171/Screenshots/Adoption%20site/voulenteer_jkogyi.jpg"/></p>
 
-
-
-
-
-4. 'Delist' - Deletes the product from the database including the product's image and the bids related to this product.
-5. 'End auction' - Like the name implies, this option ends the auction. meaning the highest bid will be accepted and no one will be able to give a new bid.
-6. 'Copy Link' feature
-7. 'Edit Avatar' - Change the user avatar.
-
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188306/Screenshots/user_page_ppxpho.jpg"/></p>
-
-1. "Change Credit Card" - For adding and updating the credit card. The changes are saved in the database if they passed the validation and are displayed directly on the card on the right.
-2. "Delete Account" - Deletes the account from the DB and everything related to this user, such as the products he uploaded and the bids he made.
-
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666189383/Screenshots/user_settings_xdcyu8.jpg"/></p>
-
-### Product page
-On this page, you can see every necessary detail on the product. 
-
-In the images we can see the end of the auction from two perspectives: 
-
-End of auction from regular users' eyes
-
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188289/Screenshots/End-auction_pept91.jpg"/></p>
-
-End of auction from the product owner's eyes
-
-<p align="center"><img src="https://res.cloudinary.com/diggwedxe/image/upload/v1666188288/Screenshots/End-auction-product-owner_rgmca7.jpg"/></p>
 
 ## Technologies:
 
