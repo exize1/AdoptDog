@@ -88,7 +88,7 @@ On this page we were focused on structure it simple. So the "Admin" will be able
 
 ## What's next:
 - [ ] Add the News and Contact sections/pages. 
-- [ ] Add Responsiveness. 
+- [x] Add Responsiveness. 
 - [ ] Save the user's contact details in the DB
 - [ ] Admin dashboard
 
