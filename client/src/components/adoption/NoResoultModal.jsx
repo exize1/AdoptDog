@@ -114,7 +114,7 @@ const NoResoultModal = ({age, size, gender, name}) => {
               </button>
           { open &&
               <div className='modal-background '>
-                  <div className='modal-fade-container no-resoult-modal'>
+                  <div className='modal-fade-container'>
                       <div className='modal-title-contianer modal-header'>
                           <h5 className="modal-title left-to-right" id="exampleModalLabel">הזינו את פרטיכם</h5>
                           <button onClick={() => handleClose()} type="button" className="btn-close"/>
@@ -123,7 +123,7 @@ const NoResoultModal = ({age, size, gender, name}) => {
                           <div className='modal-body-contianer'>
                             <div className="modal-details-container ">
                                 <button className="btn btn-secondary dropdown-toggle modal-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {reqGender ? reqGender: "הכל" }
+                                    {reqGender ? reqGender: "מין" }
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li  onClick={() => {setReqGender("זכר")}}><button className="dropdown-item" href="#">זכר</button></li>
@@ -132,7 +132,7 @@ const NoResoultModal = ({age, size, gender, name}) => {
                                     <li  onClick={() => {setReqGender("")}}><button className="dropdown-item" href="#">הכל</button></li>
                                 </ul>
                                 <button className="btn btn-secondary dropdown-toggle modal-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {reqAge ? reqAge : "הכל"} 
+                                    {reqAge ? reqAge : "גיל"} 
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li onClick={() => {setReqAge("עד שנה")}}><button className="dropdown-item" href="#">עד שנה</button></li>
@@ -141,7 +141,7 @@ const NoResoultModal = ({age, size, gender, name}) => {
                                     <li onClick={() => {setReqAge("")}}><button className="dropdown-item" href="#">הכל</button></li>
                                 </ul>
                                 <button className="btn btn-secondary dropdown-toggle modal-dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    {reqSize ? reqSize: "הכל"}
+                                    {reqSize ? reqSize: "גודל"}
                                 </button>
                                 <ul className="dropdown-menu">
                                     <li onClick={() => {setReqSize("גדול/ה")}}><button className="dropdown-item" href="#">גדול/ה</button></li>
@@ -191,16 +191,20 @@ const NoResoultModal = ({age, size, gender, name}) => {
                                           <textarea type="text" className="form-control" id="floatingInput" placeholder="הודעה אישית*"/>
                                           <label for="floatingInput">הודעה אישית*</label>
                                       </div>
-                                      <button type="submit" className="btn btn-primary no-resoult-btn right-to-left">שליחה</button>
+                                      <button type="submit" className="btn btn-primary mb-4 right-to-left">שליחה</button>
                                   </form>
                                   )}
                               </Formik>
                                 {dogsOpenForAdoption === "0" ? 
-                                    <div class="alert alert-success right-to-left"  role="alert" hidden={!alert}>
-                                        {"הנתונים נקלטו במאגר שלנו, נחזור אליך ברגע שנמצא התאמה"}  
+                                    <div className="alert-container">
+                                        <div class="alert alert-success right-to-left save-spot-alert"  role="alert" hidden={!alert}>
+                                            <p className="m-0">{"הנתונים נקלטו במאגר שלנו, נחזור אליך ברגע שנמצא התאמה"}  </p>
+                                        </div> 
                                     </div> :
-                                    <div class="alert alert-danger"  role="alert" hidden={!alert}>
-                                        {"נמצאו " + dogsOpenForAdoption + " התאמות"}  
+                                    <div className="alert-container"> 
+                                        <div class="alert alert-danger save-spot-alert" role="alert" hidden={!alert}>
+                                            <p className="m-0">{"נמצאו " + dogsOpenForAdoption + " התאמות"}  </p>
+                                        </div>
                                     </div>
                                     }
                           </div>
