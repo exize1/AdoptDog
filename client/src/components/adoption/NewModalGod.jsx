@@ -90,7 +90,7 @@ const NewDogModal = ({dog}) => {
                                 }) => (
 
                                 <form ref={form} onSubmit={handleSubmit} noValidate>
-                                    <div className="form-floating mb-3">
+                                    <div className="form-floating mb-3  right-to-left">
 
                                         <input name="fullName" type="text" className="form-control" id="floatingInput" placeholder="שם ושם משפחה*" onChange={handleChange} value={values.fullName} onBlur={handleBlur}/>
                                         <label for="floatingInput">שם ושם משפחה*</label>
@@ -111,8 +111,10 @@ const NewDogModal = ({dog}) => {
                                         <label for="floatingInput">הודעה אישית*</label>
                                     </div>
                                     <button type="submit" className="btn btn-primary right-to-left mb-4">שליחה</button>
-                                    <div className="alert alert-success right-to-left mb-4" role="alert" hidden={!alert}>
-                                        תודה שבחרתם לאמץ, נחזור אליכם בהקדם!
+                                    <div className="alert-container"> 
+                                        <div className="alert alert-success save-spot-alert right-to-left mb-4" role="alert" hidden={!alert}>
+                                            תודה שבחרתם לאמץ, נחזור אליכם בהקדם!
+                                        </div>
                                     </div>
                                 </form>
                                 )}
